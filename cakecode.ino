@@ -2,8 +2,8 @@
 // maham fatima
 // sept 18 2024
 // A0 - CPSC 599 Physical and Tangible HCI
-// i referenced the following infomration and code in this file:
-// i referenced the birthday music playing from : https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601
+// i referenced the following information and code in this file:
+// i referenced the birthday music playing code from : https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601
 // and learned how to use sound sensor and code from: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
 // ----------------------------
 
