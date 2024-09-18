@@ -4,7 +4,7 @@
 // A0 - CPSC 599 Physical and Tangible HCI
 // i adapted the following information and code in this file:
 // i adapted the birthday music playing code from : https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601
-// and learned how to use sound sensor and code from: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
+// and learned how to use sound sensor and the code from: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
 // ----------------------------
 
 //https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601 -> bday tune code below from here
@@ -24,7 +24,7 @@ const int ledpin=13;
 const int soundpin=A2;
     
 // to check if user has blown into the mic (sound sensor) 
-// Learned about sound sensor and used code below: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
+// sound sensor code below: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
 const int threshold=200; // threshold for the microphone
 
 
@@ -43,6 +43,7 @@ void loop() {
     if (soundsensor>=threshold) {         // check if sound louder then the threshold 
     digitalWrite(ledpin,LOW);           // turns led on when sound registered at higher then threshold
     // loop through and play bday song -> bday music code here https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601
+    // modified it to play once instead of continuous loop
     for (int i= 0; i<28; i++){       // loop for the duration of one round of "happy birthday" song
       tone(7, pin[i], time[i]);       // play which note and how long 
       delay (time[i]);                 // add a delay between notes       
