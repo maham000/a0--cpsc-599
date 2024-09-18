@@ -2,6 +2,7 @@
 // maham fatima
 // sept 18 2024
 // A0 - CPSC 599 Physical and Tangible HCI
+// i referenced the following infomration and code in this file:
 // i referenced the birthday music playing from : https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601
 // and learned how to use sound sensor and code from: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
 // ----------------------------
@@ -23,7 +24,8 @@ const int ledpin=13;
 const int soundpin=A2;
     
 // to check if user has blown into the mic (sound sensor) 
-const int threshold=200; // threshold for the microphone -> Learned about sound sensor and used code: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
+// Learned about sound sensor and used code below: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
+const int threshold=200; // threshold for the microphone
 
 
 void setup() {
@@ -34,14 +36,13 @@ pinMode(micpin, OUTPUT); // set speaker to be output
 }
 
 void loop() {
-    // Learned about sound sensor and used if statement code below from: https://kandrproject.blogspot.com/2018/01/arduino-with-sound-sensor-and-led-code.html
     // in this loop we check to see if someone has exceeded the threshold and if so the light turns of and music turns on 
     // else the light stays on
     int soundsensor=analogRead(soundpin); // reads analog data from sound sensor
 
     if (soundsensor>=threshold) {         // check if sound louder then the threshold 
     digitalWrite(ledpin,LOW);           // turns led on when sound registered at higher then threshold
-    // loop through and play bday song -> bday music code here
+    // loop through and play bday song -> bday music code here https://forum.arduino.cc/t/playing-happy-birthday-to-you-on-arduino/303601
     for (int i= 0; i<28; i++){       // loop for the duration of one round of "happy birthday" song
       tone(7, pin[i], time[i]);       // play which note and how long 
       delay (time[i]);                 // add a delay between notes       
